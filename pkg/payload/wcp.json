@@ -1,0 +1,32 @@
+{
+ "ops": [
+  {
+   "set": {
+    "xpath": "//service[@name='irsstitcher_server']/@autorun",
+    "value": "no",
+    "reason": "Stitcher's backend is off with Stitcher (the service shut down; it only costs boot time)"
+   }
+  },
+  {
+   "set": {
+    "xpath": "//service[@name='blm_ira_stitcher']/@autorun",
+    "value": "no",
+    "reason": "Stitcher shut down; the service only costs boot time"
+   }
+  },
+  {
+   "set": {
+    "xpath": "//service[@name='irsstitcher_server']/@reset_board",
+    "value": "no",
+    "reason": "turned off: if anything still starts it and it fails, it must not reset the head unit"
+   }
+  },
+  {
+   "set": {
+    "xpath": "//service[@name='blm_ira_stitcher']/@reset_board",
+    "value": "no",
+    "reason": "turned off: if anything still starts it and it fails, it must not reset the head unit"
+   }
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "ops": [
+  {
+   "remove": {
+    "xpath": "//Config[@name='stitcher']",
+    "reason": "MMUI loads the UIA module of every configured app one by one before it answers the GUI; this one is never used here, so dropping it brings the Home screen sooner"
+   }
+  }
+ ]
+}

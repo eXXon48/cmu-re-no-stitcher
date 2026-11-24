@@ -1,0 +1,51 @@
+{
+  "formatVersion": 1,
+  "name": "cmu-re-no-stitcher",
+  "version": "0.0.0",
+  "author": "CMU-Revised",
+  "targetCMU": "74.00.324A",
+  "category": "System mods",
+  "description": "Turns off Stitcher: its service (blm_ira_stitcher) and backend (irsstitcher_server) do not start at boot, MMUI no longer loads its screen module, and the Stitcher entry leaves the Entertainment list. Uninstall and restart to get the stock behaviour back.",
+  "minDaemon": "0.1.0",
+  "depends": "cmu-re-store (>= 0.13.4)",
+  "conflicts": "",
+  "restart": true,
+  "files": [
+    {
+      "live": "/jci/sm/sm.conf",
+      "payload": "payload/sm.json",
+      "mode": "0755",
+      "owner": "1000:1000",
+      "type": "modify",
+      "apply": "xml-node",
+      "reason": "Stitcher service and its backend off at boot; they never reset the board"
+    },
+    {
+      "live": "/jci/sm/sm_WCP.conf",
+      "payload": "payload/wcp.json",
+      "mode": "0755",
+      "owner": "1000:1000",
+      "type": "modify",
+      "apply": "xml-node",
+      "reason": "Stitcher service and its backend off at boot; they never reset the board"
+    },
+    {
+      "live": "/jci/mmui/mmui_config.xml",
+      "payload": "payload/mmui.json",
+      "mode": "0755",
+      "owner": "1000:1000",
+      "type": "modify",
+      "apply": "xml-node",
+      "reason": "MMUI no longer loads the screen module(s) of this service, which it loads one by one before it answers the GUI"
+    },
+    {
+      "live": "/jci/gui/apps/system/js/systemApp.js",
+      "payload": "payload/systemApp.diff",
+      "mode": "0755",
+      "owner": "1000:1000",
+      "type": "modify",
+      "apply": "3way",
+      "reason": "removes the Stitcher entry from the Entertainment list"
+    }
+  ]
+}

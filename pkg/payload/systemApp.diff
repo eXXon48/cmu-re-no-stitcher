@@ -1,0 +1,10 @@
+--- a/systemApp.js
++++ b/systemApp.js
+@@ -686,7 +686,6 @@ systemApp.prototype._initEntertainmentDataList = function()
+         { appData : { appName : 'xmaudio',        isVisible : false, audioSourceId : 'XmAudio',   mmuiEvent : 'SelectXmAudio'  }, text1Id : 'XMAudio',       disabled : true,   itemStyle : 'style01',   hasCaret: false },
+         { appData : { appName : 'aharadio',       isVisible : false, audioSourceId : 'AhaRadio',     mmuiEvent : 'SelectAhaRadio'     }, text1Id : 'AhaRadio',        disabled : true,   itemStyle : 'style01',   hasCaret: false }, 
+         { appData : { appName : 'pandora',        isVisible : false, audioSourceId : 'Pandora',      mmuiEvent : 'SelectPandora'      }, text1Id : 'Pandora',         disabled : true,   itemStyle : 'style01',   hasCaret: false },
+-        { appData : { appName : 'stitcher',       isVisible : true,  audioSourceId : 'Stitcher',     mmuiEvent : 'SelectStitcher'     }, text1Id : 'StitcherItem',    disabled : true,   itemStyle : 'style01',   hasCaret: false },
+         { appData : { appName : 'btaudio',        isVisible : true,  audioSourceId : 'BTAudio',      mmuiEvent : 'SelectBTAudio'      }, text1Id : 'Bluetooth',       disabled : false,  itemStyle : 'style01',   hasCaret: false },
+         { appData : { appName : 'carplay',        isVisible : false, audioSourceId : 'CarPlayWifi',  mmuiEvent : 'SelectCarPlayWifi'  }, text1Id : 'CarPlay',        disabled : true,   itemStyle : 'style01',   hasCaret: false },
+         { appData : { appName : 'carplay',        isVisible : false, audioSourceId : 'CarPlay',      mmuiEvent : 'SelectCarPlay'      }, text1Id : 'USB1CarPlay',     disabled : true,   itemStyle : 'style01',   hasCaret: false },
